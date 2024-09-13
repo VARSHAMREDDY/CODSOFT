@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Gen Agency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #f0f0f0;
+            overflow-x: hidden;
+            background-color: #1b1b1b;
+        }
+
+        header {
+            background-color: #181818;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            animation: slideInDown 1s ease-out;
+        }
+
+        .container {
+            width: 85%;
+            margin: 0 auto;
+        }
+
+        header h1 {
+            float: left;
+            font-size: 2em;
+            font-weight: bold;
+            color: #00bcd4;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+            transform: scale(1.1);
+        }
+
+        .btn-nav {
+            background-color: #00bcd4;
+            color: #fff;
+            border-radius: 20px;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn-nav:hover {
+            background-color: #00796b;
+            transform: scale(1.1);
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .hero {
+            background: url('https://img.freepik.com/free-vector/3d-style-black-background-with-paper-layer_206725-669.jpg?size=626&ext=jpg') no-repeat center center/cover;
+            color: #fff;
+            padding: 180px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00bcd4;
+            color: #fff;
+            border-radius: 25px;
+            margin: 15px;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00796b;
+            transform: translateY(-5px);
+        }
+
+        .features {
+            background-color: #2e2e2e;
+            color: #00bcd4;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .features .feature-box {
+            width: 30%;
+            display: inline-block;
+            margin: 20px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .features .feature-box:hover {
+            transform: scale(1.05);
+        }
+
+        .features h3 {
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .about, .services {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .about h2, .services h2 {
+            margin-bottom: 30px;
+            font-size: 2.4em;
+            color: #00bcd4;
+            text-transform: uppercase;
+        }
+
+        .services .service-box {
+            width: 30%;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .services .service-box img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .services .service-box img:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #181818;
+            color: #00bcd4;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .features .feature-box, .services .service-box {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Next Gen Agency</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#" class="btn-nav">Get Started</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Step Into the Future</h2>
+            <p>Innovative solutions for the next generation of businesses</p>
+            <a href="#" class="btn">Learn More</a>
+            <a href="#" class="btn">Join Us</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-box">
+                <h3>Advanced AI Tools</h3>
+                <p>Take advantage of AI-powered solutions that streamline operations and enhance creativity.</p>
+            </div>
+            <div class="feature-box">
+                <h3>24/7 Global Support</h3>
+                <p>Our team is always ready to provide expert support, no matter where you are.</p>
+            </div>
+            <div class="feature-box">
+                <h3>Time Efficiency</h3>
+                <p>Optimize your workflow and maximize productivity with cutting-edge tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>A forward-thinking agency, delivering powerful digital experiences with a futuristic touch.</p>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <img src="https://img.freepik.com/free-photo/representations-user-experience-interface-design_23-2150104516.jpg?ga=GA1.1.183357383.1726227232&semt=ais_hybrid" alt="User Experience">
+                <p>Landing Page Design</p>
+            </div>
+            <div class="service-box">
+                <img src="https://img.freepik.com/free-vector/creativity-illustration-concept-idea-imagination-design-brainstorming_613284-3217.jpg?ga=GA1.1.183357383.1726227232&semt=ais_hybrid" alt="Creative Design">
+                <p>Creative Portfolios</p>
+            </div>
+            <div class="service-box">
+                <img src="https://img.freepik.com/free-photo/close-up-eye-scanning_23-2148878100.jpg?ga=GA1.1.183357383.1726227232&semt=ais_hybrid" alt="Retina Ready">
+                <p>Custom Data Solutions</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Next Gen Agency. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
